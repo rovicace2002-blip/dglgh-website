@@ -33,11 +33,72 @@ nav.links a:hover{color:var(--green);}
 .dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);}
 
 /* Hero */
-.hero{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;padding:70px 24px;text-align:center;}
-.hero h1{font-size:34px;margin-bottom:12px;}
-.hero p{font-size:16px;opacity:.92;max-width:600px;margin:0 auto 22px;}
-.hero .tag{color:var(--gold);font-style:italic;font-weight:600;margin-bottom:14px;display:block;}
-.btn-cta{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;padding:12px 28px;border-radius:30px;}
+
+.hero{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    padding:90px 8%;
+     background:
+        linear-gradient(
+            90deg,
+            rgba(9,94,51,.98) 0%,
+            rgba(9,94,51,.95) 45%,
+            rgba(9,94,51,.55) 100%
+        ),
+        url("images/hospital-hero.jpg");
+    background-size:cover;
+    background-position:center right;
+    color:#fff;
+    overflow:hidden;
+}
+.hero-content{
+    flex:1;
+    max-width:600px;
+}
+.hero .tag{
+    display:block;
+    margin-bottom:18px;
+    color:var(--gold);
+    font-style:italic;
+    font-weight:600;
+    font-size:17px;
+}
+.hero h1{
+    font-size:56px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+.hero p{
+    font-size:18px;
+    line-height:1.8;
+    opacity:.95;
+    margin-bottom:30px;
+}
+.btn-cta{
+    display:inline-block;
+    background:var(--gold);
+    color:#222;
+    font-weight:700;
+    padding:15px 34px;
+    border-radius:40px;
+    transition:.3s;
+}
+.btn-cta:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+.hero-image{
+    flex:1;
+    text-align:right;
+}
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    filter:drop-shadow(0 25px 45px rgba(0,0,0,.3));
+}
 
 /* Page header (non-home pages) */
 .page-header{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;padding:44px 24px;text-align:center;}
@@ -109,10 +170,20 @@ footer.site a,footer.site p{color:#dfe9e3;font-size:13px;display:block;margin-bo
 
 
 <section class="hero">
-  <span class="tag">Alagang Lacson, Alagang Tunay</span>
-  <h1>Your Health Comes First</h1>
-  <p>Access services, patient resources, and compassionate care all in one place at Dr. Gloria D. Lacson General Hospital.</p>
-  <a class="btn-cta" href="services-offered.html">Explore Health Services</a>
+    <div class="hero-content">
+        <span class="tag">Alagang Lacson, Alagang Tunay</span>
+        <h1>Your Health Comes First</h1>
+        <p>
+            Access services, patient resources, and compassionate care all in one place at
+            Dr. Gloria D. Lacson General Hospital.
+        </p>
+        <a class="btn-cta" href="services-offered.html">
+            Explore Health Services
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="images/doctor.png" alt="Doctor">
+    </div>
 </section>
 
 <section class="stat-band">

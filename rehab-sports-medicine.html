@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rehab & Sports Medicine | Dr. Gloria D. Lacson General Hospital</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{
+  --green:#0B6B3A; --green-dark:#084d2a; --green-light:#e8f4ee;
+  --gold:#D4AF37; --gold-dark:#b3901f;
+  --text:#1a1a1a; --muted:#6b6b6b; --bg:#f7f8f6;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* Header */
+.topbar{background:var(--green-dark);color:#fff;font-size:13px;padding:6px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+.topbar a{color:#fff;opacity:.9;margin-right:16px;}
+header.main{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:50;}
+.nav-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 24px;}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--green-dark);font-size:17px;}
+.brand img{height:44px;width:44px;border-radius:50%;object-fit:cover;background:var(--green-light);}
+nav.links{display:flex;gap:22px;flex-wrap:wrap;align-items:center;}
+nav.links a{font-size:14px;font-weight:600;color:var(--text);}
+nav.links a:hover{color:var(--green);}
+.dropdown{position:relative;}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);border-radius:8px;padding:10px 0;min-width:260px;max-height:400px;overflow-y:auto;}
+.dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu a{display:block;padding:8px 18px;font-size:13px;font-weight:500;}
+.dropdown-menu a:hover{background:var(--green-light);color:var(--green-dark);}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;padding:70px 24px;text-align:center;}
+.hero h1{font-size:34px;margin-bottom:12px;}
+.hero p{font-size:16px;opacity:.92;max-width:600px;margin:0 auto 22px;}
+.hero .tag{color:var(--gold);font-style:italic;font-weight:600;margin-bottom:14px;display:block;}
+.btn-cta{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;padding:12px 28px;border-radius:30px;}
+
+/* Page header (non-home pages) */
+.page-header{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;padding:44px 24px;text-align:center;}
+.page-header h1{font-size:26px;}
+.page-header p{opacity:.85;font-size:13px;margin-top:6px;}
+
+/* Sections */
+.section{max-width:1100px;margin:0 auto;padding:50px 24px;}
+.section h2{font-size:24px;color:var(--green-dark);margin-bottom:8px;}
+.section .lead{color:var(--muted);margin-bottom:28px;max-width:700px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+.card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,.06);border-top:4px solid var(--gold);}
+.card h3{font-size:16px;color:var(--green-dark);margin-bottom:8px;}
+.card p{font-size:13.5px;color:var(--muted);}
+.card ul{margin-top:10px;padding-left:18px;font-size:13.5px;color:var(--text);}
+.card ul li{margin-bottom:4px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+@media(max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.stat-band{background:var(--green-light);padding:36px 24px;text-align:center;}
+.stat-band .grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));max-width:900px;margin:0 auto;}
+.stat-band .num{font-size:28px;font-weight:800;color:var(--green-dark);}
+.stat-band .label{font-size:13px;color:var(--muted);}
+
+.contact-box{background:#fff;border-radius:14px;padding:26px;box-shadow:0 4px 16px rgba(0,0,0,.06);}
+.contact-box p{margin-bottom:10px;font-size:14px;}
+.contact-box strong{color:var(--green-dark);}
+
+table.fees{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.06);}
+table.fees th{background:var(--green-dark);color:#fff;padding:12px;text-align:left;font-size:13px;}
+table.fees td{padding:12px;border-bottom:1px solid #eee;font-size:13.5px;}
+
+.doctor-list{list-style:none;}
+.doctor-list li{background:#fff;margin-bottom:10px;padding:14px 18px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.05);font-size:14px;}
+
+footer.site{background:var(--green-dark);color:#fff;padding:44px 24px 20px;margin-top:40px;}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;}
+footer.site h4{color:var(--gold);font-size:14px;margin-bottom:12px;}
+footer.site a,footer.site p{color:#dfe9e3;font-size:13px;display:block;margin-bottom:8px;}
+.footer-bottom{text-align:center;font-size:12px;color:#a9c2b3;margin-top:30px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>&#128231; lacsonhospital180@gmail.com &nbsp; | &nbsp; &#128222; 0908 867 5528</div>
+  <div><a href="https://facebook.com/lacsonhospital" target="_blank">Facebook</a><a href="https://m.me/lacsonhospital" target="_blank">Messenger</a></div>
+</div>
+<header class="main">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html"><img src="dglgh-logo.png" alt="Dr. Gloria D. Lacson General Hospital logo">Dr. Gloria D. Lacson General Hospital</a>
+    
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="doctors.html" style="color:var(--green)">Doctors</a>
+        <div class="dropdown-menu"><a href="obstetrics-gynecology.html">Obstetrics & Gynecology</a><a href="general-surgery.html">General Surgery</a><a href="pediatrics.html">Pediatrics</a><a href="anesthesiologist.html">Anesthesiologist</a><a href="internal-medicine.html">Internal Medicine</a><a href="neurosurgery.html">Neurosurgery</a><a href="neurovascular-surgery.html">Neurovascular Surgery</a><a href="thoracic-cardiovascular.html">Thoracic & Cardiovascular</a><a href="pediatric-surgery.html">Pediatric Surgery</a><a href="plastic-reconstructive.html">Plastic & Reconstructive</a><a href="cosmetic-aesthetics.html">Cosmetic & Aesthetics</a><a href="orthopedic-surgery.html">Orthopedic Surgery</a><a href="cardiology.html">Cardiology</a><a href="pulmonology.html">Pulmonology</a><a href="gastroenterology.html">Gastroenterology</a><a href="nephrology.html">Nephrology</a><a href="infectious-disease.html">Infectious Disease</a><a href="family-medicine.html">Family Medicine</a><a href="adult-psychiatry.html">Adult Psychiatry</a><a href="rehab-sports-medicine.html">Rehab & Sports Medicine</a><a href="urology.html">Urology</a><a href="ophthalmology.html">Ophthalmology</a><a href="head-neck-surgery-ent.html">Head & Neck Surgery (ENT)</a></div>
+      </div>
+      <a href="services-offered.html">Services Offered</a>
+      <a href="hospital-department.html">Hospital Department</a>
+      <a href="rates-and-fees.html">Rates and Fees</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact-us.html">Contact Us</a>
+    </nav>
+    
+  </div>
+</header>
+
+
+<section class="page-header"><h1>Rehab & Sports Medicine</h1><p>Dr. Gloria D. Lacson General Hospital &mdash; Specialty Department</p></section>
+<section class="section">
+  <div class="two-col">
+    <div>
+      <h2>About this Department</h2>
+      <p class="lead">Our Rehab & Sports Medicine department provides comprehensive, compassionate, and evidence-based care in line with our hospital's commitment to quality health services.</p>
+      <p class="lead">For consultation schedules, doctor availability, and specific services under this department, please contact our front desk or message us directly.</p>
+    </div>
+    <div class="contact-box">
+      <h3 style="margin-bottom:10px;">Get in Touch</h3>
+      <p><strong>Phone:</strong> 0908 867 5528</p>
+      <p><strong>Email:</strong> lacsonhospital180@gmail.com</p>
+      <p><strong>Address:</strong> National Highway, Castellano, San Leonardo, Nueva Ecija, Philippines</p>
+      <p style="margin-top:14px;"><a class="btn-cta" href="https://m.me/lacsonhospital" target="_blank">Message Us on Messenger</a></p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site">
+  <div class="footer-grid">
+    <div>
+      <h4>Dr. Gloria D. Lacson General Hospital</h4>
+      <p>Alagang Lacson, Alagang Tunay</p>
+      <p>National Highway, Castellano, San Leonardo, Nueva Ecija, Philippines</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="about-us.html">About Us</a>
+      <a href="services-offered.html">Services Offered</a>
+      <a href="hospital-department.html">Hospital Department</a>
+      <a href="rates-and-fees.html">Rates and Fees</a>
+      <a href="contact-us.html">Contact Us</a>
+    </div>
+    <div>
+      <h4>Popular Specialties</h4>
+      <a href="obstetrics-gynecology.html">Obstetrics & Gynecology</a><a href="general-surgery.html">General Surgery</a><a href="pediatrics.html">Pediatrics</a><a href="anesthesiologist.html">Anesthesiologist</a><a href="internal-medicine.html">Internal Medicine</a><a href="neurosurgery.html">Neurosurgery</a><a href="neurovascular-surgery.html">Neurovascular Surgery</a><a href="thoracic-cardiovascular.html">Thoracic & Cardiovascular</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="https://facebook.com/lacsonhospital" target="_blank">Facebook Page</a>
+      <a href="https://m.me/lacsonhospital" target="_blank">Message Us</a>
+      <p>lacsonhospital180@gmail.com</p>
+      <p>0908 867 5528</p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Dr. Gloria D. Lacson General Hospital &mdash; All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>

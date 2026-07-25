@@ -35,24 +35,30 @@ nav.links a:hover{color:var(--green);}
 /* Hero */
 
 .hero{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-    padding:90px 8%;
-     background:
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 90px 8%;
+    color: #fff;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 75% 30%, rgba(255,255,255,.18), transparent 35%),
         linear-gradient(
             90deg,
-            rgba(9,94,51,.98) 0%,
-            rgba(9,94,51,.95) 45%,
-            rgba(9,94,51,.55) 100%
+            #0b5f37 0%,
+            rgba(11,95,55,.98) 35%,
+            rgba(11,95,55,.88) 55%,
+            rgba(11,95,55,.45) 75%,
+            rgba(11,95,55,.10) 100%
         ),
         url("images/hospital-hero.jpg");
-    background-size:cover;
-    background-position:center right;
-    color:#fff;
-    overflow:hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
 }
 .hero-content{
     flex:1;
